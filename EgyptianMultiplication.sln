@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptianMultiplication.Application", "EgyptianMultiplication.Application\EgyptianMultiplication.Application.csproj", "{E99CA374-F6AA-4E0D-ABE2-9014B6E85539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptianMultiplication.Core", "EgyptianMultiplication.Core\EgyptianMultiplication.Core.csproj", "{A310DAA3-F71C-44D5-B638-E9232CD59836}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgyptianMultiplication.Tests", "EgyptianMultiplication.Tests\EgyptianMultiplication.Tests.csproj", "{B891C3B7-FB0A-43EE-B7BB-5B80A4FC7D84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E99CA374-F6AA-4E0D-ABE2-9014B6E85539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E99CA374-F6AA-4E0D-ABE2-9014B6E85539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E99CA374-F6AA-4E0D-ABE2-9014B6E85539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E99CA374-F6AA-4E0D-ABE2-9014B6E85539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A310DAA3-F71C-44D5-B638-E9232CD59836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A310DAA3-F71C-44D5-B638-E9232CD59836}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A310DAA3-F71C-44D5-B638-E9232CD59836}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A310DAA3-F71C-44D5-B638-E9232CD59836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B891C3B7-FB0A-43EE-B7BB-5B80A4FC7D84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B891C3B7-FB0A-43EE-B7BB-5B80A4FC7D84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B891C3B7-FB0A-43EE-B7BB-5B80A4FC7D84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B891C3B7-FB0A-43EE-B7BB-5B80A4FC7D84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E19A2D-67A2-40E1-AFD4-05FFDB2646A7}
+	EndGlobalSection
+EndGlobal
