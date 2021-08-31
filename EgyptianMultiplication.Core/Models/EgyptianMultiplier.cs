@@ -12,22 +12,23 @@ namespace EgyptianMultiplication.Core.Models
         /// <summary>
         /// Multiplies two positive factors.
         /// </summary>
-        /// <param name="factorA">First factor</param>
-        /// <param name="factorB">Second factor</param>
+        /// <param name="A">First factor</param>
+        /// <param name="B">Second factor</param>
         /// <returns>The product of factorA and factorB</returns>
-        public long Multiply(int factorA, int factorB)
+        public long Multiply(int A, int B)
         {
-            if (factorA < 0 || factorB < 0)
-            {
-                throw new ArgumentOutOfRangeException("Only positive factors are allowed.");
-            }
+            bool isPositive = isProductPostive(A, B);
+            int factorA = Math.Abs(A);
+            int factorB = Math.Abs(B);
 
             var allRows = decomposeIntoRows(factorA, factorB);
             var selectedRows = selectRows(allRows, factorA);
-            var sum = selectedRows.Sum(r => r.PowerOfTwoProduct);
+            var sum = selectedRows.Sum(r => r.PowerOfTwoProduct) * (isPositive ? 1 : -1);
 
             return sum;
         }
+
+        private bool isProductPostive(int A, int B) => ((A >= 0 && B >= 0) || (A < 0 && B < 0));
 
         private IEnumerable<Row> selectRows(IEnumerable<Row> allRows, int factorA)
         {

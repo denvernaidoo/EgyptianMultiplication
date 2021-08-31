@@ -8,13 +8,13 @@ namespace EgyptianMultiplication.Application
         static void Main(string[] args)
         {
             Console.WriteLine("This application will multiply two integer factors (A & B) using the Ancient Egyptian Multiplication Method.");
-            var factorA = ReadFactor("A");            
-            var factorB = ReadFactor("B");
+            var A = ReadFactor("A");            
+            var B = ReadFactor("B");
 
             var egyptianMultiplier = new EgyptianMultiplier();
-            var product = egyptianMultiplier.Multiply(factorA, factorB);
+            var product = egyptianMultiplier.Multiply(A, B);
             Console.WriteLine("Result:");
-            Console.WriteLine($"{factorA} x {factorB} = {product}");
+            Console.WriteLine($"{A} x {B} = {product}");
             Console.ReadKey();
         }
 
@@ -22,7 +22,7 @@ namespace EgyptianMultiplication.Application
         /// Validates and reads and integer factor from the console
         /// </summary>
         /// <param name="factor">Name of factor.</param>
-        /// <returns>the positive integer that the user entered.</returns>
+        /// <returns>the integer that the user entered.</returns>
         static int ReadFactor(string factor)
         {            
             var validResponseReceived = false;
@@ -33,11 +33,11 @@ namespace EgyptianMultiplication.Application
                 Console.Write($"Enter factor {factor}: ");
                 var input = Console.ReadLine();
                 isInteger = int.TryParse(input, out result);
-                validResponseReceived = isInteger && result >= 0;
+                validResponseReceived = isInteger;
 
                 if (!validResponseReceived)
                 {
-                    Console.WriteLine("Please enter a positive integer.");
+                    Console.WriteLine("Please enter an integer.");
                 }                
             }
 

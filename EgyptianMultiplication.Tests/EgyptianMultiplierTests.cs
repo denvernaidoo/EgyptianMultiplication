@@ -24,21 +24,24 @@ namespace EgyptianMultiplication.Tests
         }
 
         [TestMethod]
-        public void Multiply_NegativeFactorA_ExceptionThrown()
+        public void Multiply_NegativeFactorA_ReturnsProduct()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _egyptianMultiplier.Multiply(-13, 12), "Failed to guard against negative factor A");
+            var product = _egyptianMultiplier.Multiply(-13, 12);
+            Assert.AreEqual(-156, product, "Failed to multiply negative factor A with positive factor B correctly.");
         }
 
         [TestMethod]
-        public void Multiply_NegativeFactorB_ExceptionThrown()
+        public void Multiply_NegativeFactorB_ReturnsProduct()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _egyptianMultiplier.Multiply(13, -12), "Failed to guard against negative factor B.");
+            var product = _egyptianMultiplier.Multiply(13, -12);
+            Assert.AreEqual(-156, product, "Failed to multiply positive factor A with negative factor B correctly.");
         }
 
         [TestMethod]
-        public void Multiply_BothNegativeFactors_ExceptionThrown()
+        public void Multiply_BothNegativeFactors_ReturnsProduct()
         {
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _egyptianMultiplier.Multiply(-13, -12), "Failed to guard against both negative factors.");
+            var product = _egyptianMultiplier.Multiply(-13, -12);
+            Assert.AreEqual(156, product, "Failed to multiply negative factor A with negative factor B correctly.");
         }
 
         [TestMethod]
